@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+ <head>
+  <meta charset="UTF-8"> 
+     <title>グラフのフェードイン</title>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+     <script type="text/javascript">
+    　jQuery(function(){
+    　// リストを非表示
+    　$('.graph img').css("opacity","0");
+
+    　// 繰り返し処理
+    　$('.graph img').each(function(i) {
+
+    　// 遅延させてフェードイン
+    　$(this).delay(300 * i).animate({opacity:1}, 500);
+    })
+})
+　　　</script>
+     <style type="text/css">
+         .graph {
+       position: relative;
+       }
+.graph img {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.graph img:first-child {
+  position: relative;
+}
+         </style>
+　</head>
+    <body>
+    <div class="graph">
+     <img src="img/graph00.png" alt="グラフ">
+     <img src="img/graph01.png" alt="グラフ">
+     <img src="img/graph02.png" alt="グラフ">
+     <img src="img/graph03.png" alt="グラフ">
+     <img src="img/graph04.png" alt="グラフ">
+</div>
+    </body>
+</html>
